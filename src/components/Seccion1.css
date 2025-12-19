@@ -1,0 +1,454 @@
+.seccion-1-container {
+  width: 100vw;
+  height: 47.448vw;
+  background-size: cover;
+  background-position: center;
+  padding-top: 3.438vw;
+  padding-left: 6.51vw;
+  padding-right: 6.51vw;
+  position: relative;
+  overflow: hidden;
+  transition: background-image 0.5s ease-in-out;
+
+}
+
+
+.header-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 86.979vw;
+  height: 5.99vw;
+  opacity: 0.8;
+  border-radius: 20px;
+  background-color: #fff;
+  padding-left: 1.302vw;
+  padding-top: 1.198vw;
+  padding-bottom: 1.146vw;
+  padding-right: 2.24vw;
+  margin-bottom: 2.656vw;
+  object-fit: contain;
+}
+
+.logo {
+  width: 15.104vw;
+  height: 2.865vw;
+  margin-right: 13vw;
+  background-image: url("https://storage.googleapis.com/welladvisor/landing_welladvisor/logo-principal.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3.5vw;
+}
+
+.nav-link {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.302vw;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a18bd6;
+}
+
+.login-btn {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.302vw;
+  font-weight: 500;
+  color: #000;
+  margin-left: auto;
+  /* Push to right if needed, but flex gap might handle it */
+  margin-left: 0vw;
+  /* Adjust based on "mas separado" */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  color: #a18bd6;
+  transform: translateY(-2px);
+}
+
+.register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  width: 11.615vw;
+  height: 3.646vw;
+  border-radius: 35px;
+  background-color: #a18bd6;
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.302vw;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: -5vw;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(161, 139, 214, 0.4);
+  background-color: #927cc5;
+}
+
+.register-icon {
+  width: 0.729vw;
+  height: 1.25vw;
+}
+
+.content-row {
+  display: flex;
+  width: 100%;
+}
+
+.left-column {
+  width: 50%;
+  /* Adjust as needed */
+  padding-top: 1vw;
+  /* Visually adjust */
+  margin-left: 1.302vw;
+}
+
+.main-title {
+  font-family: "Urbanist", sans-serif;
+  font-size: 4.167vw;
+  font-weight: bold;
+  line-height: 1.13;
+  color: #000;
+  text-align: left;
+  margin-bottom: 1vw;
+}
+
+.subtitle {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.823vw;
+  font-weight: normal;
+  line-height: 1.29;
+  color: #000;
+  text-align: left;
+  margin-bottom: 2vw;
+  max-width: 80%;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.join-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16.667vw;
+  height: 4.688vw;
+  border-radius: 45px;
+  background-color: #8476c3;
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.563vw;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(132, 118, 195, 0.4);
+  background-color: #7669b0;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.823vw;
+  font-weight: normal;
+  line-height: 1.29;
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+  opacity: 0.8;
+  transform: translateX(0.5vw);
+}
+
+.arrow-right-icon {
+  width: 1.094vw;
+  height: 1.094vw;
+}
+
+.right-column {
+  width: 50%;
+  position: relative;
+}
+
+/* Animación para icon-top-right - movimiento vertical */
+@keyframes floatUp {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1.5vw);
+  }
+}
+
+/* Animación para main-image - movimiento horizontal */
+@keyframes slideLeft {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-1.5vw);
+  }
+}
+
+/* Animación para floating-image - movimiento vertical */
+@keyframes floatUpSmooth {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2vw);
+  }
+}
+
+/* Aplicar animaciones a las clases existentes */
+.icon-top-right {
+  position: absolute;
+  top: 12.552vw;
+  left: -6.5vw;
+  right: auto;
+  width: 13.125vw;
+  height: 12.656vw;
+  z-index: 10;
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+.main-image {
+  width: 41.406vw;
+  height: 35.417vw;
+  margin-top: 0vw;
+  position: relative;
+  z-index: 2;
+  margin-left: 4.3vw;
+  animation: slideLeft 4s ease-in-out infinite;
+}
+
+.floating-image {
+  position: absolute;
+  width: 15.417vw;
+  height: 9.01vw;
+  top: 24.635vw;
+  right: -2vw;
+  left: auto;
+  z-index: 10;
+  animation: floatUpSmooth 3.5s ease-in-out infinite;
+}
+
+.carousel-container {
+  width: 100%;
+  position: relative;
+  /* Ensure height matches content so no jump */
+  min-height: 40vw;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.26vw;
+  margin-top: 2vw;
+  /* Adjust as visually needed relative to content */
+  position: absolute;
+  bottom: 0.833vw;
+  /* Approximate position at bottom of section */
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.indicator-line {
+  width: 2.604vw;
+  height: 0.208vw;
+  background-color: #d2d8dd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator-line.active {
+  background-color: #bcaaec;
+}
+
+/* Ensure content row takes full width */
+.content-row {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+/* Efecto de ola en letras */
+.wave-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-letter {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation-delay: calc(var(--letter-index) * 0.05s);
+}
+
+.wave-btn:hover .wave-letter {
+  animation: wave 0.8s ease-in-out;
+  /* Cambiado de 0.6s a 0.8s para efecto más suave */
+  animation-delay: calc(var(--letter-index) * 0.05s);
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0) scale(1);
+    color: inherit;
+  }
+
+  30% {
+    transform: translateY(-0.8vw) scale(1.2);
+    color: #ffffff;
+    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.8);
+  }
+
+  60% {
+    transform: translateY(0) scale(1.1);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    color: inherit;
+  }
+}
+
+/* Ajustes para register-btn */
+.register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  width: 11.615vw;
+  height: 3.646vw;
+  border-radius: 35px;
+  background-color: #a18bd6;
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.302vw;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: -5vw;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(161, 139, 214, 0.4);
+  background-color: #927cc5;
+}
+
+.register-text,
+.join-text {
+  display: flex;
+}
+
+/* Ajustes para join-btn */
+.join-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16.667vw;
+  height: 4.688vw;
+  border-radius: 45px;
+  background-color: #8476c3;
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.563vw;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(132, 118, 195, 0.4);
+  background-color: #7669b0;
+}
+
+/* Solo para el slide2 */
+.content-row.slide-1 .main-image {
+  width: 35.938vw;
+  height: 32.917vw;
+  margin-left: 8vw;
+  z-index: 2;
+}
+
+.content-row.slide-1 .icon-top-right {
+  top: 19.531vw;
+  left: 3vw;
+  width: 11.823vw;
+  height: 10vw;
+  z-index: 1;
+}
+
+.content-row.slide-1 .floating-image {
+  top: 28.021vw;
+  right: 4vw;
+  width: 5.208vw;
+  height: 5.625vw;
+  z-index: 3;
+}
+
+/* Solo para el slide 3 */
+.content-row.slide-2 .main-image {
+  width: 50.677vw;
+  height: 28.854vw;
+  margin-left: -3vw;
+  z-index: 1;
+  margin-top: 3vw;
+}
+
+.content-row.slide-2 .icon-top-right {
+  top: 4vw;
+  left: -8.5vw;
+  width: 11.146vw;
+  height: 8.073vw;
+  z-index: 2;
+}
+
+.content-row.slide-2 .floating-image {
+  top: 0vw;
+  right: 1vw;
+  width: 16.198vw;
+  height: 6.719vw;
+  z-index: 3;
+}

@@ -1,0 +1,291 @@
+.footer-container {
+    width: 100vw;
+    height: 31.25vw;
+    object-fit: contain;
+    background-color: #f7f6fc;
+    padding-top: 4.01vw;
+    padding-left: 7.813vw;
+    padding-right: 7.813vw;
+    padding-bottom: 2vw;
+    position: relative;
+}
+
+/* Sección de columnas superiores */
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 8vw;
+    margin-bottom: 3vw;
+}
+
+/* Columna izquierda */
+.footer-left {
+    flex: 1;
+    max-width: 30%;
+}
+
+.footer-logo {
+    width: 20.625vw;
+    height: 3.906vw;
+    margin-bottom: 1.563vw;
+    display: block;
+}
+
+.footer-description {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.302vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0;
+}
+
+/* Columna centro */
+.footer-center {
+    flex: 1;
+    max-width: 25%;
+}
+
+/* Columna derecha */
+.footer-right {
+    flex: 1;
+    max-width: 30%;
+}
+
+.footer-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.823vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0 0 1.823vw 0;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.302vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #8476c3;
+    transform: translateX(0.5vw);
+}
+
+/* Sección inferior */
+.footer-bottom {
+    width: 84.375vw;
+    margin: 0 auto;
+}
+
+.footer-separator {
+    width: 84.375vw;
+    height: 0.052vw;
+    margin-bottom: 1.563vw;
+    display: block;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.302vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.88;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0;
+}
+
+/* Iconos de redes sociales */
+.footer-social {
+    display: flex;
+    gap: 1.563vw;
+    align-items: center;
+}
+
+.social-icon {
+    width: 3.698vw;
+    height: 3.698vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    transform: translateY(-0.8vw);
+}
+
+/* Animación suave para los iconos */
+@keyframes socialBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.8vw);
+    }
+}
+
+/* Evitar scroll del fondo cuando el modal está abierto */
+.wa-modal-open {
+    overflow: hidden;
+}
+
+/* patrón común: bloquear el scroll del body */
+/* [web:26] */
+
+/* Overlay */
+.wa-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Caja modal */
+.wa-modal {
+    width: 49.479vw;
+    height: 39.063vw;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botón X */
+.wa-modal-close {
+    position: absolute;
+    top: 1.302vw;
+    right: 1.823vw;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    width: 1.146vw;
+    height: 1.146vw;
+}
+
+.wa-modal-close img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Título centrado */
+.wa-modal-title {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.823vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin-top: 2.135vw;
+    margin-bottom: 1.823vw;
+}
+
+/* Contenido con scroll */
+.wa-modal-body {
+    padding-left: 2.604vw;
+    padding-right: 2.604vw;
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1.563vw;
+}
+
+.wa-modal-text {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.302vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0;
+    white-space: pre-line;
+    /* respeta saltos de línea del string */
+}
+
+.wa-modal-btn {
+    align-self: center;
+    width: 42.5vw;
+    height: 3.385vw;
+    margin-bottom: 1.927vw;
+
+    border-radius: 10px;
+    border: solid 2px #8476c3;
+    background-color: #fff;
+
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.042vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8476c3;
+
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    /* suave */
+    /* [web:50][web:52] */
+}
+
+.wa-modal-btn:hover {
+    background-color: #8476c3;
+    /* “llena” el botón */
+    color: #fff;
+    /* texto blanco */
+    border-color: #8476c3;
+}

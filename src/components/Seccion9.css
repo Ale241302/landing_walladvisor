@@ -1,0 +1,198 @@
+.seccion-9-container {
+    width: 100vw;
+    height: 44.271vw;
+    background-color: #fff;
+    padding-left: 7.813vw;
+    padding-right: 7.813vw;
+    padding-top: 8.042vw;
+    padding-bottom: 1.042vw;
+    position: relative;
+    overflow: visible;
+}
+
+.section-9-title {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 3.646vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin: 0 0 4.323vw 0;
+}
+
+/* Carrusel de testimonios */
+.testimonial-carousel-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    /* Cambiar a visible completamente */
+    margin-bottom: 2vw;
+    display: flex;
+    justify-content: center;
+    /* Centrar el contenido */
+}
+
+.testimonial-slide {
+    display: flex;
+    gap: 1.771vw;
+    justify-content: center;
+    /* Centrar las tarjetas */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 84.375vw;
+    /* Ancho máximo para las 3 tarjetas */
+}
+
+/* Efecto hover para las tarjetas */
+.testimonial-card-wrapper {
+    width: 26.354vw;
+    height: 21.094vw;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+    z-index: 1;
+}
+
+.testimonial-card-wrapper:hover {
+    transform: translateY(-1.5vw);
+    z-index: 10;
+}
+
+.testimonial-card-wrapper:hover .testimonial-card-bg {
+    box-shadow: 0 1.5vw 3vw rgba(188, 170, 236, 0.5);
+}
+
+.testimonial-card-wrapper:hover .testimonial-card-content {
+    box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.25);
+}
+
+/* Fondo morado con opacidad */
+.testimonial-card-bg {
+    width: 26.354vw;
+    height: 21.094vw;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #bcaaec;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: box-shadow 0.4s ease-out;
+}
+
+/* Contenido de la card */
+.testimonial-card-content {
+    width: 25.521vw;
+    height: 20.313vw;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #f7f6fc;
+    padding-top: 2.5vw;
+    padding-left: 1.563vw;
+    padding-bottom: 1.563vw;
+    padding-right: 1.563vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.4s ease-out;
+}
+
+.testimonial-text {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.302vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0 0 1.5vw 0;
+    flex: 1;
+}
+
+/* Autor del testimonio */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.author-image {
+    width: 4.167vw;
+    height: 4.167vw;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vw;
+}
+
+.author-name {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.302vw;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0;
+}
+
+.author-position {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.302vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0;
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators-9 {
+    display: flex;
+    justify-content: center;
+    gap: 0.52vw;
+    position: absolute;
+    bottom: 1.042vw;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.indicator-line-9 {
+    width: 2.604vw;
+    height: 0.208vw;
+    object-fit: contain;
+    background-color: #d2d8dd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 2px;
+}
+
+.indicator-line-9.active {
+    background-color: #bcaaec;
+}

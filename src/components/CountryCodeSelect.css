@@ -1,0 +1,69 @@
+.country-select-rfs {
+  width: 9.375vw;
+}
+
+/* Botón base */
+.country-select-rfs .country-select-btn {
+  width: 9.375vw;
+  height: 3.646vw;
+  border-radius: 10px;
+  border: 1px solid #d2d4dd;
+  background: #fff !important;
+  /* evita backgrounds del package */
+  background-image: none !important;
+  /* evita flechas por background */
+  box-shadow: none !important;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.302vw;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  padding: 0 1.1vw;
+  position: relative;
+}
+
+/* Mata cualquier pseudo-elemento que el package meta en el botón (el “algo” suele venir de aquí) */
+.country-select-rfs .country-select-btn::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Flecha TUYA, centrada (pseudo-elemento) */
+.country-select-rfs .country-select-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: url("https://storage.googleapis.com/welladvisor/landing_welladvisor/icon-ionic-ios-arrow-down.svg")
+    no-repeat center / contain;
+  pointer-events: none;
+}
+
+/* Contenedor interno: bandera + label */
+.country-select-rfs .country-select-btn > span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Bandera (primer svg) */
+.country-select-rfs .country-select-btn svg {
+  width: 1.875vw;
+  height: 1.406vw;
+  flex: 0 0 auto;
+}
+
+/* Si el package está metiendo OTRO svg (flecha/indicador), lo ocultamos */
+.country-select-rfs .country-select-btn svg:not(:first-of-type) {
+  display: none !important;
+}
+
+/* Empuja el +57 totalmente a la derecha (si el span del +57 cambia de clase, esto lo ajustamos con tu HTML) */
+.country-select-rfs .country-select-btn [class*="secondary"],
+.country-select-rfs .country-select-btn [class*="Secondary"] {
+  margin-left: auto;
+}

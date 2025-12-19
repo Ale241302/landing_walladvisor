@@ -1,0 +1,188 @@
+.seccion-2-container {
+    width: 100vw;
+    height: 75.729vw;
+    background-color: #fff;
+    padding-top: 9.896vw;
+    padding-bottom: 17.344vw;
+    padding-left: 7.813vw;
+    padding-right: 7.813vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-2-title {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 3.646vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin: 0;
+}
+
+.content-wrapper {
+    margin-top: 8vw;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    width: 100%;
+    justify-content: center;
+}
+
+.left-cards,
+.right-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card {
+    position: relative;
+    width: 20.833vw;
+    height: 10.417vw;
+    object-fit: contain;
+    border-radius: 20px;
+    background-color: #f2f3fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vw;
+    z-index: 3;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-0.5vw) scale(1.02);
+    box-shadow: 0 1vw 2vw rgba(132, 118, 195, 0.2);
+    background-color: #e8e6f5;
+}
+
+.left-cards .feature-card:nth-child(1),
+.right-cards .feature-card:nth-child(1) {
+    margin-bottom: 3.75vw;
+}
+
+.left-cards .feature-card:nth-child(2),
+.right-cards .feature-card:nth-child(2) {
+    margin-bottom: 2.292vw;
+}
+
+.feature-text {
+    object-fit: contain;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.563vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin: 0;
+    max-width: 100%;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-text {
+    color: #5a4a8a;
+}
+
+.circle-icon {
+    position: absolute;
+    width: 4.688vw;
+    height: 4.688vw;
+    border-radius: 45px;
+    background-color: #8476c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover .circle-icon {
+    transform: scale(1.15) rotate(10deg);
+    background-color: #6b5aa0;
+    box-shadow: 0 0.5vw 1.5vw rgba(132, 118, 195, 0.4);
+}
+
+.circle-icon.top-left {
+    top: -2.344vw;
+    left: 0vw;
+}
+
+.circle-icon.top-leftt {
+    top: -2.344vw;
+    left: -1vw;
+}
+
+.circle-icon.top-right {
+    top: -2.344vw;
+    right: -1vw;
+}
+
+.circle-icon.top-rightt {
+    top: -2.344vw;
+    right: 0vw;
+}
+
+.circle-icon.bottom-left {
+    bottom: -2.344vw;
+    left: 0vw;
+}
+
+.circle-icon.bottom-right {
+    bottom: -2.344vw;
+    right: 0vw;
+}
+
+.circle-icon img {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .circle-icon img {
+    transform: scale(1.1);
+}
+
+.images-container {
+    position: relative;
+    width: 30.885vw;
+    height: 34.948vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animación de zoom in/out para background-circle */
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Actualiza la clase background-circle */
+.background-circle {
+    position: absolute;
+    width: 31.5vw;
+    height: 31.5vw;
+    z-index: 1;
+    animation: zoomInOut 8s ease-in-out infinite;
+}
+
+.app-mockup {
+    position: absolute;
+    width: 48.125vw;
+    height: 35.99vw;
+    z-index: 2;
+    margin-left: 1.7vw;
+}
