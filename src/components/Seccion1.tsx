@@ -102,8 +102,10 @@ const Seccion1: React.FC = () => {
   const joinUrl = import.meta.env.VITE_JOIN_URL;
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const slide = slides[currentSlide];
 
+  // Carrusel automático
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -111,6 +113,37 @@ const Seccion1: React.FC = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Bloquear scroll cuando el menú está abierto
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Deshabilitar scroll
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed'; // Opcional: evita saltos en iOS
+      document.body.style.width = '100%'; // Opcional: mantiene el ancho
+    } else {
+      // Restaurar scroll
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+
+    // Cleanup: restaurar scroll al desmontar componente
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [isMenuOpen]);
+
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <motion.section
@@ -126,6 +159,14 @@ const Seccion1: React.FC = () => {
       viewport={{ amount: 0.3 }}
     >
       <div className="header-block">
+        <button className="hamburger-btn" onClick={toggleMenu}>
+          <img
+            src="https://storage.googleapis.com/welladvisor/landing_welladvisor/icon-feather-menu.svg"
+            alt="menu"
+            className="hamburger-icon"
+          />
+        </button>
+
         <div className="logo" />
 
         <nav className="nav-links">
@@ -145,6 +186,45 @@ const Seccion1: React.FC = () => {
           />
         </a>
       </div>
+
+      {/* Sidebar Menu Mobile */}
+      <div className={`sidebar-menu ${isMenuOpen ? 'open' : ''}`}>
+        <nav className="sidebar-nav">
+          <a href="#" className="sidebar-link" onClick={closeMenu}>
+            <img
+              src="https://storage.googleapis.com/welladvisor/landing_welladvisor/asset-11.svg"
+              alt="Inicio"
+              className="sidebar-icon"
+            />
+            <span>Inicio</span>
+          </a>
+
+          <div className="sidebar-divider" />
+
+          <a href="#beneficios" className="sidebar-link" onClick={closeMenu}>
+            <img
+              src="https://storage.googleapis.com/welladvisor/landing_welladvisor/asset-39.svg"
+              alt="Beneficios"
+              className="sidebar-icon"
+            />
+            <span>Beneficios</span>
+          </a>
+
+          <div className="sidebar-divider" />
+
+          <a href="#contacto" className="sidebar-link" onClick={closeMenu}>
+            <img
+              src="https://storage.googleapis.com/welladvisor/landing_welladvisor/icon-feather-message-square.svg"
+              alt="Contacto"
+              className="sidebar-icon sidebar-icon--small"
+            />
+            <span>Contacto</span>
+          </a>
+        </nav>
+      </div>
+
+      {/* Overlay */}
+      {isMenuOpen && <div className="overlay" onClick={closeMenu} />}
 
       <div className="carousel-container">
         <AnimatePresence mode="wait">

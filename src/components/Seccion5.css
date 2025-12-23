@@ -321,3 +321,214 @@
         color: inherit;
     }
 }
+
+/* ===== RESPONSIVE 900PX - SECCION 5 ===== */
+@media only screen and (max-width: 900px) {
+    .seccion-5-container {
+        width: 100vw;
+        height: 175.926vw;
+        padding-top: 19.259vw;
+        padding-left: 2.778vw;
+        padding-right: 2.778vw;
+        padding-bottom: 1.852vw;
+    }
+
+    /* Carousel Wrapper - Vertical Layout */
+    .carousel-wrapper {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Vertical Indicators - Move to Bottom */
+    .vertical-indicators {
+        flex-direction: row;
+        gap: 2vw;
+        order: 3;
+        margin-top: 0;
+        position: relative;
+    }
+
+    /* Indicator Dot Mobile */
+    .indicator-dot {
+        width: 1.204vw;
+        height: 1.204vw;
+        background-color: #000;
+    }
+
+    .indicator-dot.active {
+        width: 2.685vw;
+        height: 2.685vw;
+    }
+
+    /* Disable drip animations on mobile */
+    .indicator-dot::after {
+        display: none;
+    }
+
+    .indicator-dot.drip-down::after,
+    .indicator-dot.drip-up::after {
+        display: none;
+    }
+
+    /* Carousel Content Mobile */
+    .carousel-content {
+        width: 100%;
+        height: auto;
+        order: 1;
+    }
+
+    /* Slide Content - Column Layout */
+    .slide-content {
+        flex-direction: column;
+        gap: 0;
+        height: auto;
+    }
+
+    /* Right Side - Goes First (Top) */
+    .right-side {
+        width: 100%;
+        order: 1;
+        padding-top: 0;
+        margin-bottom: 4.63vw;
+    }
+
+    /* Left Side - Goes Second (Bottom) */
+    .left-side {
+        width: 100%;
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8.241vw;
+    }
+
+    .section-title {
+        font-size: 7.87vw !important;
+        line-height: 1.12;
+        margin-bottom: 4vw;
+    }
+
+    /* Add space after first word */
+    .section-title span {
+        margin-right: 2vw;
+        /* Espacio entre "Beneficios" y la segunda palabra */
+    }
+
+    /* Hide line break in mobile */
+    .section-title br {
+        display: none;
+    }
+
+    /* Benefits List Mobile */
+    .benefits-list {
+        margin-bottom: 3.5vw;
+    }
+
+    .benefit-item {
+        font-size: 3.704vw !important;
+        line-height: 1.13;
+        margin-bottom: 5vw;
+        padding-left: 5vw;
+    }
+
+    .benefit-item::before {
+        font-size: 4vw;
+        left: 0;
+    }
+
+    /* Register Button Mobile */
+    .register-button {
+        width: 94.444vw;
+        height: 10.185vw;
+        border-radius: 55px;
+        margin-bottom: 10vw;
+    }
+
+    .button-text {
+        font-size: 3.704vw;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* Image Box Mobile */
+    .image-box {
+        width: 64.815vw;
+        height: 65.463vw;
+        border-radius: 25px;
+    }
+
+    /* Professional Image Mobile - Base */
+    .professional-image {
+        width: 60vw;
+        height: auto;
+        max-height: 70vw;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: contain;
+    }
+
+    /* Slide 0 - Default Image */
+    .professional-image--0 {
+        width: 61.389vw;
+        height: auto;
+        max-height: 74.444vw;
+        bottom: 0;
+        margin-left: 0;
+    }
+
+    /* Slide 1 - Adjusted */
+    .professional-image--1 {
+        width: 61.389vw;
+        height: auto;
+        max-height: 74.444vw;
+        bottom: 0;
+        margin-left: 5vw;
+    }
+
+    /* Slide 2 - Adjusted */
+    .professional-image--2 {
+        width: 61.389vw;
+        height: auto;
+        max-height: 74.444vw;
+        bottom: 0;
+    }
+
+    /* Zoom Animation Mobile - Slightly Reduced */
+    @keyframes zoomInOutProfessional {
+
+        0%,
+        100% {
+            transform: translateX(-50%) scale(1);
+        }
+
+        50% {
+            transform: translateX(-50%) scale(1.03);
+        }
+    }
+
+    /* Wave Animation Mobile - Adjusted */
+    @keyframes wave {
+        0% {
+            transform: translateY(0) scale(1);
+            color: inherit;
+        }
+
+        30% {
+            transform: translateY(-1vw) scale(1.15);
+            color: #ffffff;
+            text-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.8);
+        }
+
+        60% {
+            transform: translateY(0) scale(1.05);
+        }
+
+        100% {
+            transform: translateY(0) scale(1);
+            color: inherit;
+        }
+    }
+}

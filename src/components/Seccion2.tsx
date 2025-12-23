@@ -8,7 +8,7 @@ interface FeatureCard {
   icon: string;
   iconWidth: string;
   iconHeight: string;
-  circlePosition: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  circlePosition: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-leftt' | 'top-rightt';
 }
 
 const leftFeatures: FeatureCard[] = [
@@ -22,7 +22,6 @@ const leftFeatures: FeatureCard[] = [
   },
   {
     id: 2,
-    // forzamos salto de línea
     text: 'Gestiona reservas<br />y pagos fácilmente.',
     icon: 'https://storage.googleapis.com/welladvisor/landing_welladvisor/icon-awesome-calendar-check.svg',
     iconWidth: '1.615vw',
@@ -82,28 +81,52 @@ const Seccion2: React.FC = () => {
       <div className="content-wrapper">
         {/* Lado izquierdo */}
         <div className="left-cards">
-          {leftFeatures.map((feature) => (
-            <motion.div
-              key={feature.id}
-              className="feature-card"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: feature.id * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className={`circle-icon ${feature.circlePosition}`}>
-                <img
-                  src={feature.icon}
-                  alt="feature icon"
-                  style={{ width: feature.iconWidth, height: feature.iconHeight }}
-                />
-              </div>
-              <p
-                className="feature-text"
-                dangerouslySetInnerHTML={{ __html: feature.text }}
+          {/* Primera card - grande */}
+          <motion.div
+            className="feature-card"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className={`circle-icon ${leftFeatures[0].circlePosition}`}>
+              <img
+                src={leftFeatures[0].icon}
+                alt="feature icon"
+                style={{ width: leftFeatures[0].iconWidth, height: leftFeatures[0].iconHeight }}
               />
-            </motion.div>
-          ))}
+            </div>
+            <p
+              className="feature-text"
+              dangerouslySetInnerHTML={{ __html: leftFeatures[0].text }}
+            />
+          </motion.div>
+
+          {/* Dos cards pequeñas lado a lado */}
+          <div className="small-cards-row">
+            {leftFeatures.slice(1).map((feature, index) => (
+              <motion.div
+                key={feature.id}
+                className="feature-card"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: (index + 2) * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className={`circle-icon ${feature.circlePosition}`}>
+                  <img
+                    src={feature.icon}
+                    alt="feature icon"
+                    style={{ width: feature.iconWidth, height: feature.iconHeight }}
+                  />
+                </div>
+                <p
+                  className="feature-text"
+                  dangerouslySetInnerHTML={{ __html: feature.text }}
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Imagen central */}
@@ -122,28 +145,52 @@ const Seccion2: React.FC = () => {
 
         {/* Lado derecho */}
         <div className="right-cards">
-          {rightFeatures.map((feature) => (
-            <motion.div
-              key={feature.id}
-              className="feature-card"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: feature.id * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className={`circle-icon ${feature.circlePosition}`}>
-                <img
-                  src={feature.icon}
-                  alt="feature icon"
-                  style={{ width: feature.iconWidth, height: feature.iconHeight }}
+          {/* Dos cards pequeñas lado a lado */}
+          <div className="small-cards-row">
+            {rightFeatures.slice(0, 2).map((feature, index) => (
+              <motion.div
+                key={feature.id}
+                className="feature-card"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: (index + 1) * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className={`circle-icon ${feature.circlePosition}`}>
+                  <img
+                    src={feature.icon}
+                    alt="feature icon"
+                    style={{ width: feature.iconWidth, height: feature.iconHeight }}
+                  />
+                </div>
+                <p
+                  className="feature-text"
+                  dangerouslySetInnerHTML={{ __html: feature.text }}
                 />
-              </div>
-              <p
-                className="feature-text"
-                dangerouslySetInnerHTML={{ __html: feature.text }}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Tercera card - grande */}
+          <motion.div
+            className="feature-card"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className={`circle-icon ${rightFeatures[2].circlePosition}`}>
+              <img
+                src={rightFeatures[2].icon}
+                alt="feature icon"
+                style={{ width: rightFeatures[2].iconWidth, height: rightFeatures[2].iconHeight }}
               />
-            </motion.div>
-          ))}
+            </div>
+            <p
+              className="feature-text"
+              dangerouslySetInnerHTML={{ __html: rightFeatures[2].text }}
+            />
+          </motion.div>
         </div>
       </div>
     </motion.section>

@@ -111,3 +111,92 @@
   transform: translateX(0.5vw);
   opacity: 1;
 }
+
+/* ===== RESPONSIVE 900PX - SECCION 3 ===== */
+@media only screen and (max-width: 900px) {
+  .seccion-3-container {
+    width: 100vw;
+    height: 125vw;
+    padding-top: 5.741vw;
+    padding-left: 2.778vw;
+    padding-right: 2.778vw;
+    padding-bottom: 7.87vw;
+    background-image: url("https://storage.googleapis.com/welladvisor/landing_welladvisor/fondo-2.png");
+  }
+
+  /* Title Mobile */
+  .seccion-3-title {
+    font-size: 7.407vw;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 8vw;
+  }
+
+  /* Steps Wrapper - Vertical Layout */
+  .steps-wrapper {
+    flex-direction: column;
+    gap: 6vw;
+  }
+
+  /* Steps Column */
+  .steps-column {
+    width: 100%;
+  }
+
+  /* Step Item Mobile */
+  .step-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6.2vw;
+  }
+
+  .step-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Step Circle Mobile */
+  .step-circle {
+    width: 9.259vw !important;
+    height: 9.259vw !important;
+    margin-right: 3vw;
+    flex-shrink: 0;
+  }
+
+  /* Step Number Mobile */
+  .step-number {
+    font-size: 3.704vw !important;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: #8476c3;
+  }
+
+  /* Step Text Mobile */
+  .step-text {
+    font-size: 3.704vw !important;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    max-width: 80%;
+  }
+
+  /* Hover effects remain but with adjusted values */
+  .step-item:hover {
+    transform: translateX(0.5vw);
+  }
+
+  .step-item:hover .step-circle {
+    transform: scale(1.08) rotate(5deg);
+  }
+
+  .step-item:hover .step-number {
+    transform: scale(1.05);
+  }
+
+  .step-item:hover .step-text {
+    transform: translateX(0.3vw);
+  }
+}
