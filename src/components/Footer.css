@@ -289,3 +289,197 @@
     /* texto blanco */
     border-color: #8476c3;
 }
+
+/* ===== RESPONSIVE 900PX - FOOTER ===== */
+@media only screen and (max-width: 900px) {
+    .footer-container {
+        width: 100vw;
+        height: auto;
+        min-height: 148.148vw;
+        padding-top: 6.296vw;
+        padding-left: 7.407vw;
+        padding-right: 8.426vw;
+        padding-bottom: 3.796vw;
+    }
+
+    /* Footer Columns - Vertical Layout */
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+        gap: 5.556vw;
+        margin-bottom: 5vw;
+    }
+
+    /* Left Column - Goes First */
+    .footer-left {
+        flex: none;
+        max-width: 100%;
+        order: 1;
+    }
+
+    /* Footer Logo Mobile */
+    .footer-logo {
+        width: 54.352vw;
+        height: 10vw;
+        margin-bottom: 5.315vw;
+        display: block;
+    }
+
+    /* Footer Description Mobile */
+    .footer-description {
+        font-size: 3.704vw;
+        font-weight: normal;
+        line-height: 1.25;
+        text-align: left;
+        color: #000;
+        margin: 0 0 2.556vw 0;
+    }
+
+    /* Hide BR in mobile for description */
+    .footer-description br {
+        display: none;
+    }
+
+    /* Center Column - Goes Second */
+    .footer-center {
+        flex: none;
+        max-width: 100%;
+        order: 2;
+    }
+
+    /* Right Column - Goes Third */
+    .footer-right {
+        flex: none;
+        max-width: 100%;
+        order: 3;
+    }
+
+    /* Footer Title Mobile (Explorar, Acceso) */
+    .footer-title {
+        font-size: 4.167vw;
+        font-weight: 600;
+        line-height: normal;
+        text-align: left;
+        color: #000;
+        margin: 0 0 1.778vw 0;
+    }
+
+    /* Footer Nav Mobile */
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer Link Mobile */
+    .footer-link {
+        font-size: 3.704vw;
+        font-weight: normal;
+        line-height: 2.25;
+        text-align: left;
+        color: #000;
+    }
+
+    /* Disable transform on hover for mobile */
+    .footer-link:hover {
+        transform: none;
+    }
+
+    /* Footer Bottom Mobile */
+    .footer-bottom {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Footer Separator Mobile */
+    .footer-separator {
+        width: 94.444vw;
+        height: 0.093vw;
+        margin-bottom: 2.315vw;
+        display: block;
+    }
+
+    /* Footer Bottom Content - Stack Vertically */
+    .footer-bottom-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.241vw;
+    }
+
+    /* Social Icons - Goes First */
+    .footer-social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3.389vw;
+        order: 1;
+        margin-bottom: 3.241vw;
+    }
+
+    /* Social Icon Mobile */
+    .social-icon {
+        width: 11.111vw;
+        height: 11.111vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Disable translateY on hover for mobile */
+    .social-icon:hover {
+        transform: none;
+    }
+
+    /* Copyright - Goes Second */
+    .footer-copyright {
+        font-size: 3.241vw;
+        font-weight: 500;
+        line-height: 0.63;
+        text-align: center;
+        color: #000;
+        margin: 0;
+        order: 2;
+    }
+
+    /* Modal Mobile Styles */
+    .wa-modal {
+        width: 90vw;
+        height: 80vh;
+        max-height: 80vh;
+        border-radius: 10px;
+    }
+
+    .wa-modal-close {
+        top: 3vw;
+        right: 3vw;
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .wa-modal-title {
+        font-size: 5vw;
+        line-height: 1.2;
+        margin-top: 6vw;
+        margin-bottom: 4vw;
+        padding: 0 4vw;
+    }
+
+    .wa-modal-body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-bottom: 4vw;
+    }
+
+    .wa-modal-text {
+        font-size: 3.5vw;
+        line-height: 1.6;
+    }
+
+    .wa-modal-btn {
+        width: 80vw;
+        height: 10vw;
+        margin-bottom: 5vw;
+        font-size: 3.5vw;
+        border-radius: 10px;
+    }
+}

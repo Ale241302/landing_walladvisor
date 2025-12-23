@@ -38,13 +38,12 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  background: url("https://storage.googleapis.com/welladvisor/landing_welladvisor/icon-ionic-ios-arrow-down.svg")
-    no-repeat center / contain;
+  background: url("https://storage.googleapis.com/welladvisor/landing_welladvisor/icon-ionic-ios-arrow-down.svg") no-repeat center / contain;
   pointer-events: none;
 }
 
 /* Contenedor interno: bandera + label */
-.country-select-rfs .country-select-btn > span {
+.country-select-rfs .country-select-btn>span {
   width: 100%;
   display: flex;
   align-items: center;
@@ -66,4 +65,76 @@
 .country-select-rfs .country-select-btn [class*="secondary"],
 .country-select-rfs .country-select-btn [class*="Secondary"] {
   margin-left: auto;
+}
+
+@media only screen and (max-width: 900px) {
+
+  /* Country Select Mobile */
+  .country-select-rfs {
+    width: 23.611vw;
+  }
+
+  /* Botón base mobile */
+  .country-select-rfs .country-select-btn {
+    width: 23.611vw;
+    height: 10.185vw;
+    border-radius: 10px;
+    border: 1px solid #d2d4dd;
+    background: #fff !important;
+    background-image: none !important;
+    box-shadow: none !important;
+
+    font-family: "Urbanist", sans-serif;
+    font-size: 3.704vw;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+    position: relative;
+  }
+
+  /* Mata cualquier pseudo-elemento del package */
+  .country-select-rfs .country-select-btn::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Flecha custom mobile - centrada */
+  .country-select-rfs .country-select-btn::after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url("https://storage.googleapis.com/welladvisor/landing_welladvisor/icon-ionic-ios-arrow-down.svg") no-repeat center / contain;
+    pointer-events: none;
+  }
+
+  /* Contenedor interno: bandera + label */
+  .country-select-rfs .country-select-btn>span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Bandera mobile (primer svg) */
+  .country-select-rfs .country-select-btn svg {
+    width: 4vw;
+    height: 3vw;
+    flex: 0 0 auto;
+  }
+
+  /* Ocultar cualquier otro svg del package */
+  .country-select-rfs .country-select-btn svg:not(:first-of-type) {
+    display: none !important;
+  }
+
+  /* Empuja el +57 a la derecha */
+  .country-select-rfs .country-select-btn [class*="secondary"],
+  .country-select-rfs .country-select-btn [class*="Secondary"] {
+    margin-left: auto;
+    font-size: 3.704vw;
+  }
+
 }

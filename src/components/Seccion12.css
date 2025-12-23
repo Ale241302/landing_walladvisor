@@ -491,3 +491,275 @@
   font-weight: 500;
   color: #706d6d;
 }
+
+/* ===== RESPONSIVE 900PX - SECCION 12 ===== */
+@media only screen and (max-width: 900px) {
+  .seccion-12-container {
+    width: 100vw;
+    height: auto;
+    min-height: 215.648vw;
+    padding-left: 2.778vw;
+    padding-right: 2.778vw;
+    padding-top: 0vw;
+    padding-bottom: 11.944vw;
+  }
+
+  /* Contact Wrapper - Vertical Layout */
+  .contact-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8vw;
+  }
+
+  /* Left Column - Goes First (Top) */
+  .left-column-12 {
+    flex: none;
+    order: 1;
+    padding-top: 0;
+  }
+
+  /* Contact Main Title Mobile */
+  .contact-main-title {
+    font-size: 7.407vw;
+    font-weight: bold;
+    line-height: 1.06;
+    text-align: left;
+    color: #000;
+    margin: 0 0 4.778vw 0;
+  }
+
+  /* Contact Subtitle Mobile */
+  .contact-subtitle {
+    font-size: 3.704vw;
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: left;
+    color: #000;
+    margin: 0 0 4.778vw 0;
+  }
+
+  /* Hide BR in mobile for subtitle */
+  .contact-subtitle br {
+    display: none;
+  }
+
+  /* Contact Description Mobile */
+  .contact-description {
+    font-size: 3.704vw;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: left;
+    color: #000;
+    margin: 0 0 4.778vw 0;
+  }
+
+  /* Hide BR in mobile for description */
+  .contact-description br {
+    display: none;
+  }
+
+  /* Contact Info Item Mobile */
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    margin-bottom: 4vw;
+  }
+
+  /* Contact Icon Wrapper Mobile */
+  .contact-icon-wrapper {
+    width: 9.259vw;
+    height: 9.259vw;
+    border-radius: 50%;
+    border: 2px solid #8476c3;
+    margin-top: 0;
+  }
+
+  .contact-icon-wrapper img {
+    width: 40%;
+    height: 40%;
+  }
+
+  /* Contact Details Mobile */
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+  }
+
+  /* Contact Label Mobile */
+  .contact-label {
+    font-size: 3.704vw;
+    font-weight: 500;
+    line-height: 1.38;
+    text-align: left;
+    color: #000;
+  }
+
+  /* Contact Value Mobile */
+  .contact-value {
+    font-size: 3.704vw;
+    font-weight: normal;
+    line-height: 1.38;
+    text-align: left;
+    color: #000;
+  }
+
+  /* Right Column - Goes Second (Bottom) */
+  .right-column-12 {
+    flex: none;
+    order: 2;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Form Card Mobile */
+  .form-card {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    padding: 8vw 6vw;
+  }
+
+  /* Form Group Mobile */
+  .form-group {
+    margin-bottom: 4vw;
+  }
+
+  /* Form Label Mobile */
+  .form-label {
+    font-size: 3.704vw;
+    font-weight: 500;
+    line-height: 1.05;
+    text-align: left;
+    color: #000;
+    display: block;
+    margin-bottom: 1.5vw;
+  }
+
+  /* Form Input Mobile */
+  .form-input {
+    width: 85.185vw;
+    height: 10.185vw;
+    border-radius: 10px;
+    border: solid 1px #d2d4dd;
+    font-family: "Urbanist", sans-serif;
+    font-size: 3.704vw;
+    font-weight: normal;
+    line-height: 1.05;
+    text-align: left;
+    color: #706d6d;
+    padding: 0 3vw;
+  }
+
+  /* Phone Input Group Mobile */
+  .phone-input-group {
+    display: flex;
+    gap: 2vw;
+  }
+
+  /* Phone Input Mobile */
+  .phone-input {
+    width: 59.722vw;
+    height: 10.185vw;
+    border-radius: 10px;
+    border: solid 1px #d2d4dd;
+    font-size: 3.704vw;
+    line-height: 1.05;
+    color: #706d6d;
+    padding: 0 3vw;
+  }
+
+  /* Form Textarea Mobile */
+  .form-textarea {
+    width: 85.185vw;
+    height: 27.778vw;
+    border-radius: 10px;
+    border: solid 1px #d2d4dd;
+    font-size: 3.704vw;
+    line-height: 1.05;
+    color: #706d6d;
+    padding: 3vw;
+    resize: none;
+  }
+
+  /* Submit Button Mobile */
+  .submit-btn {
+    width: 85.185vw;
+    height: 10.463vw;
+    border-radius: 40px;
+    background-color: #8476c3;
+    font-size: 3.704vw;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+  }
+
+  /* Form Decoration Icon Mobile */
+  .form-decoration-icon {
+    width: 32.87vw !important;
+    height: 22.593vw !important;
+    position: absolute;
+    bottom: 134.741vw;
+    left: 58.352vw;
+    z-index: 3;
+  }
+
+  /* Disable animation on mobile */
+  .form-decoration-icon {
+    animation: none;
+  }
+
+  /* Wave animation mobile */
+  @keyframes wave {
+    0% {
+      transform: translateY(0) scale(1);
+      color: inherit;
+    }
+
+    30% {
+      transform: translateY(-1vw) scale(1.15);
+      color: #ffffff;
+      text-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.8);
+    }
+
+    60% {
+      transform: translateY(0) scale(1.05);
+    }
+
+    100% {
+      transform: translateY(0) scale(1);
+      color: inherit;
+    }
+  }
+
+  /* Modal Success Mobile */
+  .modal-success-card {
+    width: 85vw;
+    min-height: 18vw;
+    border-radius: 3vw;
+    padding: 4vw 5vw;
+    gap: 3vw;
+  }
+
+  .modal-success-icon {
+    width: 8vw;
+    height: 8vw;
+    font-size: 5vw;
+  }
+
+  .modal-success-title {
+    font-size: 4vw;
+  }
+
+  .modal-success-subtitle {
+    font-size: 3.5vw;
+    margin-top: 1vw;
+  }
+}

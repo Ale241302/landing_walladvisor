@@ -191,3 +191,193 @@
         transform: translateY(-1.5vw);
     }
 }
+
+/* ===== RESPONSIVE 900PX - SECCION 8 ===== */
+@media only screen and (max-width: 900px) {
+    .seccion-8-container {
+        width: 100vw;
+        height: auto;
+        min-height: 100vw;
+        padding-left: 2.778vw;
+        padding-right: 2.778vw;
+        padding-top: 0vw;
+        padding-bottom: 3.704vw;
+    }
+
+    /* Top Arrow Mobile */
+    .top-arrow-8 {
+        width: 20vw !important;
+        height: 17.685vw !important;
+        position: absolute;
+        top: -25vw;
+        left: 38.241vw;
+        z-index: 3;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    /* Adjust arrow animation for mobile */
+    @keyframes floatDownUpArrow8 {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(2vw);
+        }
+    }
+
+    /* Columns Wrapper - Vertical Layout */
+    .columns-wrapper-8 {
+        flex-direction: column;
+        height: auto;
+        gap: 6vw;
+    }
+
+    /* Left Card - Goes First (Top) */
+    .left-card-8 {
+        width: 100%;
+        height: 92.593vw;
+        padding-left: 6.944vw;
+        padding-right: 6.944vw;
+        padding-top: 10.519vw;
+        padding-bottom: 5vw;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #f7f6fc;
+        position: relative;
+        order: 1;
+        z-index: 1;
+    }
+
+    /* Step Circle Mobile */
+    .step-circle-8 {
+        width: 10.093vw;
+        height: 10.093vw;
+        margin-bottom: 2.778vw;
+    }
+
+    /* Step Number Mobile */
+    .step-number-8 {
+        font-size: 4.167vw;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        color: #8476c3;
+    }
+
+    /* Step Title Mobile */
+    .step-title-8 {
+        font-size: 6.481vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: left;
+        margin-bottom: 2.778vw;
+    }
+
+    /* Hide BR in mobile for single line title */
+    .step-title-8 br {
+        display: none;
+    }
+
+    /* Step Description Mobile */
+    .step-description-8 {
+        font-size: 3.704vw;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 2.778vw;
+    }
+
+    /* Hide BR in mobile for description */
+    .step-description-8 br {
+        display: none;
+    }
+
+    /* KYC Info Mobile */
+    .kyc-info {
+        font-size: 3.704vw;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        color: #000;
+        margin: 0;
+    }
+
+    /* Hide BR in mobile for KYC info */
+    .kyc-info br {
+        display: none;
+    }
+
+    .kyc-label {
+        color: #8476c3;
+        font-weight: 600;
+    }
+
+    /* Right Card - Goes Second (Bottom) */
+    .right-card-8 {
+        width: 85.185vw;
+        height: 62.963vw;
+        opacity: 0.95;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #bcaaec;
+        position: relative;
+        margin: 0 auto;
+        margin-top: -18vw;
+        top: auto;
+        right: auto;
+        order: 2;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        padding: 0 2vw;
+    }
+
+    /* Verification Image Mobile */
+    .verification-image {
+        width: 62vw !important;
+        height: 62vw !important;
+        object-fit: contain;
+    }
+
+    /* Adjust zoom animation for mobile */
+    @keyframes zoomInOut8 {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    /* Side Icon Mobile */
+    .side-icon {
+        width: 22vw;
+        height: 20.926vw;
+        object-fit: contain;
+        position: relative;
+        z-index: 2;
+        margin-top: 20vw;
+    }
+
+    /* Adjust icon animation for mobile */
+    @keyframes floatUpDown8Icon {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-2vw);
+        }
+    }
+}

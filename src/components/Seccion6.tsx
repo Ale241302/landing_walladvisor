@@ -73,7 +73,7 @@ const Seccion6: React.FC = () => {
           viewport={{ once: true }}
         >
           <img
-            src="https://storage.googleapis.com/welladvisor/landing_welladvisor/img-referencia.png"
+            src="https://storage.googleapis.com/welladvisor/landing_welladvisor/registro.png"
             alt="Preview"
             className="preview-image"
           />

@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Seccion11.css';
 import { motion } from 'framer-motion';
 
 const Seccion11: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 900);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <motion.section
       id="seccion_11"
@@ -32,11 +44,19 @@ const Seccion11: React.FC = () => {
             />
 
             <p className="alliance-description">
-              Nuestra alianza con Psicologos.health<br />
-              permite a los profesionales ampliar su<br />
-              visibilidad, fortalecer su presencia digital<br />
-              y acceder a nuevas oportunidades dentro<br />
-              de un ecosistema confiable y especializado.
+              {isMobile ? (
+                // Mobile: Sin BR tags, texto fluido
+                "Nuestra alianza con Psicologos.health permite a los profesionales ampliar su visibilidad, fortalecer su presencia digital y acceder a nuevas oportunidades dentro de un ecosistema confiable y especializado."
+              ) : (
+                // Desktop: Con BR tags
+                <>
+                  Nuestra alianza con Psicologos.health<br />
+                  permite a los profesionales ampliar su<br />
+                  visibilidad, fortalecer su presencia digital<br />
+                  y acceder a nuevas oportunidades dentro<br />
+                  de un ecosistema confiable y especializado.
+                </>
+              )}
             </p>
           </motion.div>
 

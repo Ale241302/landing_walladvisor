@@ -220,3 +220,167 @@
         color: inherit;
     }
 }
+
+/* ===== RESPONSIVE 900PX - SECCION 6 ===== */
+@media only screen and (max-width: 900px) {
+    .seccion-6-container {
+        width: 100vw;
+        height: 202.5vw;
+        padding-left: 2.778vw;
+        padding-right: 2.778vw;
+        padding-top: 23.611vw;
+        padding-bottom: 3.704vw;
+    }
+
+    /* Title Mobile */
+    .section-6-title {
+        font-size: 7.407vw;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 9.259vw;
+    }
+
+    /* Columns Wrapper - Vertical Layout */
+    .columns-wrapper {
+        flex-direction: column;
+        height: auto;
+        gap: 6vw;
+    }
+
+    /* Left Card - Goes First (Top) */
+    .left-card {
+        width: 100%;
+        height: 92.593vw;
+        padding-left: 6.944vw;
+        padding-right: 2.944vw;
+        padding-top: 10.519vw;
+        padding-bottom: 5vw;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #f7f6fc;
+        position: relative;
+        z-index: 1;
+        order: 1;
+    }
+
+    /* Step Circle Mobile */
+    .step-circle {
+        width: 10.093vw;
+        height: 10.093vw;
+        margin-bottom: 2.778vw;
+    }
+
+    /* Step Number Mobile */
+    .step-number {
+        font-size: 4.167vw;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        color: #8476c3;
+    }
+
+    /* Step Title Mobile */
+    .step-title {
+        font-size: 6.481vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: left;
+        margin-bottom: 2.778vw;
+    }
+
+    /* Step Description Mobile */
+    .step-description {
+        font-size: 3.704vw;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 2.778vw;
+    }
+
+    /* Register Button Mobile */
+    .register-now-btn {
+        width: 46.296vw;
+        height: 10.185vw;
+        border-radius: 55px;
+        background-color: #8476c3;
+    }
+
+    .btn-text {
+        font-size: 3.704vw;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+        color: #fff;
+    }
+
+    /* Right Card - Goes Second (Bottom) */
+    .right-card {
+        width: 87.963vw;
+        height: 49.074vw;
+        opacity: 0.95;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #bcaaec;
+        position: relative;
+        margin: 0 auto;
+        order: 2;
+        top: auto;
+        right: auto;
+        margin-top: -18vw;
+    }
+
+    /* Preview Image Mobile */
+    .preview-image {
+        width: 81.019vw;
+        height: 40.556vw;
+        object-fit: contain;
+    }
+
+    /* Decoration Dots Mobile */
+    .decoration-dots {
+        width: 14.167vw;
+        height: 13.426vw;
+        position: absolute;
+        bottom: -2vw;
+        right: -2vw;
+        z-index: 2;
+    }
+
+
+
+    /* Adjust animations for mobile */
+    @keyframes floatUpDown {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-2vw);
+        }
+    }
+
+    /* Wave animation mobile */
+    @keyframes wave {
+        0% {
+            transform: translateY(0) scale(1);
+            color: inherit;
+        }
+
+        30% {
+            transform: translateY(-1vw) scale(1.15);
+            color: #ffffff;
+            text-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.8);
+        }
+
+        60% {
+            transform: translateY(0) scale(1.05);
+        }
+
+        100% {
+            transform: translateY(0) scale(1);
+            color: inherit;
+        }
+    }
+}

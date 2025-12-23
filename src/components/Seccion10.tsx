@@ -4,14 +4,31 @@ import { motion } from 'framer-motion';
 
 const Seccion10: React.FC = () => {
   const videoUrl = import.meta.env.VITE_VIDEO_URL_2;
-  const fallbackImageUrl = 'https://storage.googleapis.com/welladvisor/landing_welladvisor/seccion-8.png';
+  const fallbackImageDesktop = 'https://storage.googleapis.com/welladvisor/landing_welladvisor/seccion-8.png';
+  const fallbackImageMobile = 'https://storage.googleapis.com/welladvisor/landing_welladvisor/seccion-8_res.png';
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [hasVideoError, setHasVideoError] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar si es mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 900);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Determinar si hay video disponible
   const hasVideo = videoUrl && videoUrl.trim() !== '';
   const shouldShowImage = !hasVideo || hasVideoError;
+
+  // Seleccionar imagen según el tamaño de pantalla
+  const currentFallbackImage = isMobile ? fallbackImageMobile : fallbackImageDesktop;
 
   useEffect(() => {
     if (!hasVideo) return; // Si no hay video, no configurar el observer
@@ -69,7 +86,7 @@ const Seccion10: React.FC = () => {
       <div className="video-container">
         {shouldShowImage ? (
           <img
-            src={fallbackImageUrl}
+            src={currentFallbackImage}
             alt="Salud Mental"
             className="background-image-10"
           />

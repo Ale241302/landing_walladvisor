@@ -127,3 +127,150 @@
     left: -3vw;
     z-index: 2;
 }
+
+/* ===== RESPONSIVE 900PX - SECCION 11 ===== */
+@media only screen and (max-width: 900px) {
+    .seccion-11-container {
+        width: 100vw;
+        height: auto;
+        min-height: 135.185vw;
+        padding-left: 2.778vw;
+        padding-right: 2.778vw;
+        padding-top: 0vw;
+        padding-bottom: 12.963vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Alliance Card Mobile */
+    .alliance-card {
+        width: 94.444vw;
+        height: 122.222vw;
+        border-radius: 20px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #8476c3;
+        overflow: visible;
+    }
+
+    /* Alliance Content - Vertical Layout */
+    .alliance-content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8.148vw;
+        padding-left: 8.333vw;
+        padding-right: 8.333vw;
+        padding-bottom: 5.093vw;
+        gap: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Left Content - Goes First (Top) */
+    .left-content {
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        order: 1;
+        margin-bottom: 4.63vw;
+    }
+
+    /* Alliance Title Mobile */
+    .alliance-title {
+        font-size: 6.481vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: left;
+        color: #fff;
+        margin: 0;
+    }
+
+    /* Title Separator Mobile */
+    .title-separator {
+        width: 23.611vw;
+        height: 1.481vw;
+        margin-top: 0;
+        margin-bottom: 2.778vw;
+        margin-left: 0;
+        display: block;
+    }
+
+    /* Alliance Description Mobile */
+    .alliance-description {
+        font-size: 3.704vw;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        color: #fff;
+        margin: 0;
+        margin-bottom: 4.63vw;
+    }
+
+    /* Replace BR with space in mobile - CORRECTED */
+    .alliance-description br {
+        display: none;
+    }
+
+    .alliance-content p {
+        margin-right: 0.2vw;
+        /* Espacio entre "Beneficios" y la segunda palabra */
+    }
+
+    .alliance-description br::after {
+        content: " ";
+        display: inline;
+    }
+
+    /* Right Content - Goes Second (Bottom) */
+    .right-content {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 2;
+        padding-right: 0;
+        margin-right: -10.5vw;
+        margin-top: 0;
+    }
+
+    /* Image Wrapper Mobile */
+    .image-wrapper {
+        position: relative;
+        width: 86.111vw;
+        height: 59.722vw;
+    }
+
+    /* Alliance Image Mobile */
+    .alliance-image {
+        width: 86.111vw;
+        height: 59.722vw;
+        object-fit: cover;
+        border-radius: 0px !important;
+        position: relative;
+        z-index: 2;
+        margin-right: 0;
+    }
+
+    /* Adjust animation for mobile */
+    @keyframes floatUpDownAlliance {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-2vw);
+        }
+    }
+
+    /* Corner Icon Mobile */
+    .corner-icon {
+        width: 8.889vw;
+        height: 8.889vw;
+        position: absolute;
+        top: -7vw;
+        left: 70vw;
+        z-index: 1;
+    }
+}
